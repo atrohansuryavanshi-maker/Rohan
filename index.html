@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkArise | All-in-One Business Automation Platform | CRM Solutions</title>
+    <meta name="description" content="LinkArise provides advanced CRM solutions for Telecalling, Field Service, Overseas Education, and Sales. Streamline leads, tasks, orders, invoices, payments, and operations efficiently.">
+    <meta name="keywords" content="CRM software, ERP software, telecalling software, field service management, business automation, sales CRM, telecalling CRM, overseas education CRM">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.linkarise.in/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="LinkArise | All-in-One Business Automation Platform">
+    <meta property="og:description" content="Advanced CRM software for Telecalling, Field Service, Overseas Education, and Sales. Streamline operations and boost revenue.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.linkarise.in/">
+    <meta property="og:image" content="https://www.linkarise.in/assets/images/linkarise-home-banner.webp">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Linkarise",
+        "url": "https://www.linkarise.in/",
+        "logo": "https://www.linkarise.in/assets/images/linkarise-logo.webp",
+        "sameAs": [
+            "https://www.facebook.com/linkarise",
+            "https://www.linkedin.com/company/linkarise"
+        ]
+    }
+    </script>
+    
+    <!-- CSS -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+    <style>
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0; 
+            }
+            .dropdown-menu {
+                border-top: 10px solid transparent;
+                background-clip: padding-box;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .dropdown-menu.show {
+                display: block;
+            }
+        }
+        
+        /* Enhanced product cards to match index-1.html styling */
+        .product-card-enhanced {
+            height: 100%;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 25px 20px;
+            background: #fff;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .product-card-enhanced:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-card-enhanced .feature-icon {
+            background: #f58220;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .product-card-enhanced .feature-icon i {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .product-card-enhanced h4 {
+            color: #003366;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .product-card-enhanced p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .product-card-enhanced ul {
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        
+        .product-card-enhanced ul li {
+            padding-left: 25px;
+            margin-bottom: 8px;
+            position: relative;
+            color: #555;
+        }
+        
+        .product-card-enhanced ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        /* Business Transformation Section */
+        .transformation-section {
+    background: #f8f9fa;
+    padding: 60px 0;
+}
+
+.transformation-points {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.transformation-points li {
+    padding: 25px 20px;
+    background: white;
+    border-radius: 8px;
+    border-top: 4px solid #f58220;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.transformation-points li:before {
+    content: "✓";
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: #28a745;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+		
+		        
+        
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin: 30px 0;
+        }
+        
+        .comparison-table thead {
+            background: #003366;
+        }
+        
+        .comparison-table th {
+            color: white;
+            font-weight: 600;
+            padding: 18px 20px;
+            border: none;
+        }
+        
+        .comparison-table td {
+            padding: 15px 20px;
+            border: 1px solid #eee;
+        }
+        
+        .comparison-table tbody tr:nth-child(odd) {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table tbody tr:hover {
+            background: #e9f7fe;
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0;
+            border-left: 4px solid #f58220;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #003366;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-role {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Why Choose Enhanced */
+        .benefit-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid #f58220;
+			
+        }
+        
+        .benefit-card .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #f58220, #ff9c45);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .benefit-card .benefit-icon i {
+            font-size: 30px;
+            color: white;
+        }
+        
+        .benefit-card h5 {
+            color: #003366;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .benefit-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section Enhancement */
+        .stat-box {
+        text-align: center;
+        padding: 40px 30px;
+        background: var(--bg-white);
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        margin-bottom: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+        
+        .stat-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 500;
+        }
+		.sloution-list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .sloution-list li {
+        background: var(--bg-white);
+        margin-bottom: 15px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+    
+    .sloution-list li:hover {
+        transform: translateY(-5px);
+    }
+    </style>
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/linkarise-logo.webp" alt="LinkArise" height="50">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="products.html" id="productsDropdown" role="button">
+                                Products
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="telecalling-crm.html">Telecalling CRM</a>
+                                <a class="dropdown-item" href="sales-crm.html">Sales CRM</a>
+                                <a class="dropdown-item" href="field-service-crm.html">Field Service CRM</a>
+                                <a class="dropdown-item" href="overseas-education-crm.html">Overseas Education CRM</a>
+                                <a class="dropdown-item" href="task-management-crm.html">Task Management CRM</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a href="contact.html" class="btn btn-primary">Get Free Demo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <h1>All-in-One CRM Suite for Modern Businesses</h1>
+                        <p class="lead">Manage leads, tasks, orders, invoices, payments, and operations efficiently from one platform. Designed to simplify operations, increase productivity, and close more deals without chaos.</p>
+                        
+                        <div class="mb-4">
+                            <span class="badge bg-light text-dark me-2 mb-2 p-2">Telecalling CRM</span>
+                            <span class="badge bg-light text-dark me-2 mb-2 p-2">Sales CRM</span>
+                            <span class="badge bg-light text-dark me-2 mb-2 p-2">Field Service CRM</span>
+                            <span class="badge bg-light text-dark mb-2 p-2">Overseas Education CRM</span>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="contact.html" class="btn btn-light btn-lg me-3">Book Free Live Demo</a>
+                            <a href="#trial" class="btn btn-outline-light btn-lg">Start Free Trial</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="LinkArise CRM Dashboard Overview" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Linkarise - Enhanced -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title">Why Choose Linkarise CRM?</h2>
+                    <p>Boost productivity, sales, and revenue with our all-in-one CRM suite designed specifically for your business needs.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h5>All-in-One CRM Suite</h5>
+                        <p>Complete solution for multiple industries and workflows in one integrated platform.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5>Boost Productivity & Revenue</h5>
+                        <p>Automate processes to increase efficiency and drive more sales with intelligent workflows.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h5>User-Friendly Interface</h5>
+                        <p>Minimal learning curve with intuitive design that your team will love to use daily.</p>
+                    </div>
+                </div>
+				<hr style="color:white;">
+				<hr style="color:white;">
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h5>Real-Time Dashboards</h5>
+                        <p>Make quick decisions with live reports and visual analytics of your business performance.</p>
+                    </div>
+                </div>
+				
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h5>Customizable Workflows</h5>
+                        <p>Tailor the CRM to match your specific business processes and requirements perfectly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5>Web & Mobile Ready</h5>
+                        <p>Access your business from anywhere with our responsive web app and mobile applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Our Products -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Our Business Solutions</h2>
+                <p class="section-subtitle">Complete solutions designed for every business need</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Telecall Card -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Telecalling CRM</h4>
+                    <p>Convert every call into an opportunity with intelligent call management.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Auto lead allocation</li>
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Call logs & recordings</li>
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Agent performance tracking</li>
+                    </ul>
+                    <a href="telecalling-crm.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- CRM Card -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Sales CRM</h4>
+                    <p>Close deals faster with complete pipeline visibility and automation.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Lead & deal management</li>
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Sales stages & automation</li>
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Task & follow-up reminders</li>
+                    </ul>
+                    <a href="sales-crm.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Field Service Card -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h4>Field Service CRM</h4>
+                    <p>Manage on-ground teams without micromanagement.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Job & service contract management</li>
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Engineer assignment & tracking</li>
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Visit scheduling & reminders</li>
+                    </ul>
+                    <a href="field-service-crm.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Visa CRM Card -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h4>Overseas Education CRM</h4>
+                    <p>Built specifically for visa & immigration consultants.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Client & document management</li>
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Case status tracking</li>
+                        <li class="mb-2"><i class="fas fa-check text-success mr-2"></i> Follow-ups & deadline alerts</li>
+                    </ul>
+                    <a href="overseas-education-crm.html" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="products.html" class="btn btn-primary btn-lg">View All Products</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Business Transformation Section -->
+    <section class="transformation-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title">How Linkarise CRM Transforms Your Business</h2>
+                    <p>Our CRMs focus on solving real operational pain points across sales, services, education, and telecalling.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="transformation-points">
+                        <li>Centralized lead, inquiry, and student management in one platform</li>
+                        <li>Automated follow-ups and reminders to increase conversions</li>
+                        <li>Track team performance in real-time with live dashboards</li>
+                        <li>Generate invoices and track payments seamlessly</li>
+                        <li>Optimize resource allocation and reduce manual work</li>
+                    </ul>
+                </div>
+				</div>
+				<br>
+				  <h2 class="section-title">See what our customers say about Linkarise CRM</h2>
+				<div class="row">
+                <div class="col-lg-4 mb-50">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Linkarise CRM improved our lead follow-up and conversion rate by 50% in just 3 months. The automation features saved us countless hours of manual work."</p>
+                        <p class="testimonial-author">– Sales Manager, Mumbai</p>
+                        <p class="testimonial-role">Manufacturing Company</p>
+                    </div>
+				</div>
+				
+				<div class="col-lg-4 mb-50">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Field Service jobs and invoicing are now completely organized and transparent. Our engineers love the mobile app for real-time updates."</p>
+                        <p class="testimonial-author">– Service Manager, Delhi</p>
+                        <p class="testimonial-role">Service Provider</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Comparison Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title">Workflow Comparison</h2>
+                    <p class="section-subtitle">See how manual processes compare with Linkarise CRM automation.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table comparison-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50%">Manual Process</th>
+                                    <th style="width: 50%">With Linkarise CRM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Leads scattered in Excel and emails</td>
+                                    <td>Centralized lead & inquiry management</td>
+                                </tr>
+                                <tr>
+                                    <td>Missed follow-ups and callbacks</td>
+                                    <td>Automated reminders and notifications</td>
+                                </tr>
+                                <tr>
+                                    <td>Manual quotations, orders, invoices</td>
+                                    <td>End-to-end automated sales & billing workflow</td>
+                                </tr>
+                                <tr>
+                                    <td>Tracking field engineers or students manually</td>
+                                    <td>Real-time tracking and reporting dashboards</td>
+                                </tr>
+                                <tr>
+                                    <td>No visibility on team performance</td>
+                                    <td>Performance metrics and accountability tracking</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-box">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-box">
+                        <span class="stat-number">45%</span>
+                        <span class="stat-label">Productivity Increase</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-box">
+                        <span class="stat-number">30%</span>
+                        <span class="stat-label">Time Saved Daily</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-box">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Stop Juggling Tools. Start Growing with Linkarise.</h2>
+            <p class="lead">Ready to transform your business operations? Get started today with our risk-free trial.</p>
+            <a href="contact.html" class="btn btn-light btn-lg me-3">Book Free Live Demo</a>
+            <a href="tel:+916354454012" class="btn btn-outline-light btn-lg">Talk to Sales</a>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="images/linkarise-logo-white.webp" alt="LinkArise" class="mb-3" height="40">
+                    <p class="mb-4">Complete CRM & ERP solutions designed for modern businesses. Simplify operations, boost productivity, and grow faster.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="products.html">Products</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5>Products</h5>
+                    <div class="footer-links">
+                        <a href="telecalling-crm.html">Telecalling CRM</a>
+                        <a href="sales-crm.html">Sales CRM</a>
+                        <a href="field-service-crm.html">Field Service CRM</a>
+                        <a href="overseas-education-crm.html">Overseas Education CRM</a>
+                        <a href="task-management-crm.html">Task Management CRM</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5>Contact Info</h5>
+                    <div class="footer-links">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Vadodara, Gujarat, India</p>
+                        <p><i class="fas fa-phone me-2"></i> +91 6354454012</p>
+                        <p><i class="fas fa-envelope me-2"></i> contact@linkarise.com</p>
+                        <p><i class="fas fa-clock me-2"></i> Mon-Sat: 11AM - 5PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="copyright">
+                        <p>&copy; 2024 LinkArise. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
