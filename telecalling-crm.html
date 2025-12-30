@@ -531,7 +531,7 @@
     .comparison-table td {
         padding: 20px;
         border-bottom: 1px solid var(--border-color);
-        text-align: center;
+        text-align: left;
     }
     
     .comparison-table tr:last-child td {
@@ -802,52 +802,228 @@
 	#i1{
 	margin-left:15px;
 	}
+	/* Industries Section Styles */
+.industries-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-card-link {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.industry-card {
+    height: 100%;
+    border-radius: 16px;
+    padding: 30px 25px;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.industry-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.industry-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.industry-card:hover:before {
+    opacity: 1;
+}
+
+.industry-icon {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.industry-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+.industry-desc {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.industry-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.industry-stats span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.industry-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.industry-card:hover .industry-cta {
+    background: rgba(255,255,255,0.3);
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .industry-card {
+        height: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .industry-card {
+        height: 280px;
+        padding: 25px 20px;
+    }
+    
+    .industry-icon {
+        font-size: 2.5rem;
+    }
+    
+    .industry-card h4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .industry-card {
+        height: 260px;
+    }
+    
+    .industry-desc {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .industry-card {
+        height: 250px;
+        padding: 20px 15px;
+    }
+    
+    .industry-icon {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .industry-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+}
+		/* Products dropdown for mobile only */
+@media (max-width: 991.98px) {
+    /* Show dropdown menu when toggled */
+    .dropdown-menu.show {
+        display: block;
+    }
+    
+    /* Mobile dropdown styling */
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #f8f9fa;
+    }
+    
+    .dropdown-item {
+        padding: 0.75rem 1.5rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Desktop: Hover behavior (optional) */
+@media (min-width: 992px) {
+    /* You can add hover effect if you want */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+    
+    /* Hide the dropdown menu by default on desktop */
+    .nav-item.dropdown .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+    }
+    
+    /* Show dropdown on hover */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+/* Hide specific list item by default (desktop) */
+.mobile-only {
+  display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: list-item;
+  }
+}
+a{
+text-decoration:none;
+}
 </style>
 </head>
-<body>   <!-- Header Component -->
-<header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/linkarise-logo.webp" alt="LinkArise" height="50">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle active" href="products.html" id="productsDropdown" role="button">
-        Products
-    </a>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="telecalling-crm.html">Telecalling CRM</a>
-        <a class="dropdown-item" href="sales-crm.html">Sales CRM</a>
-        <a class="dropdown-item" href="field-service-crm.html">Field Service CRM</a>
-        <a class="dropdown-item" href="overseas-education-crm.html">Overseas Education CRM</a>
-        <a class="dropdown-item" href="task-management-crm.html">Task Management CRM</a>
+<body> 
 
-    </div>
-</li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a href="contact.html" class="btn btn-primary">Get Free Demo</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+  <!-- Header Component -->
+<script src="header.js"></script>
+
 <!-- Hero Section -->
   <section class="telecall-hero">
     <div class="container">
@@ -1226,7 +1402,165 @@
             </div>
         </div>
     </section>
-    
+	
+    <!-- Industries We Serve Section -->
+<section class="industries-section" style="padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+    <div class="container">
+        <div class="row mb-50">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-title">Industries We Serve</h2>
+                <p class="section-subtitle">Linkarise Telecalling CRM is trusted by 500+ businesses across diverse sectors</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Education -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a href="education-telecalling-crm.html" class="industry-card-link">
+                    <div class="industry-card" style="background: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 100%);">
+                        <div class="industry-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Education</h4>
+                        <p class="industry-desc">Coaching institutes, schools, colleges, and overseas education consultants</p>
+                        <div class="industry-stats">
+                            <span><i class="fas fa-users"></i> 150+ Clients</span>
+                            <span><i class="fas fa-chart-line"></i> 45% Growth</span>
+                        </div>
+                        <span class="industry-cta">Explore Solution <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Real Estate -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a href="real-estate-telecalling-crm.html" class="industry-card-link">
+                    <div class="industry-card" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                        <div class="industry-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Real Estate</h4>
+                        <p class="industry-desc">Property developers, brokers, housing finance companies, and rental agencies</p>
+                        <div class="industry-stats">
+                            <span><i class="fas fa-users"></i> 120+ Clients</span>
+                            <span><i class="fas fa-chart-line"></i> 50% Growth</span>
+                        </div>
+                        <span class="industry-cta">Explore Solution <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Banking & Finance -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a href="banking-telecalling-crm.html" class="industry-card-link">
+                    <div class="industry-card" style="background: linear-gradient(135deg, #FC466B 0%, #3F5EFB 100%);">
+                        <div class="industry-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4>Banking & Finance</h4>
+                        <p class="industry-desc">Banks, NBFCs, insurance companies, and financial service providers</p>
+                        <div class="industry-stats">
+                            <span><i class="fas fa-users"></i> 90+ Clients</span>
+                            <span><i class="fas fa-chart-line"></i> 55% Growth</span>
+                        </div>
+                        <span class="industry-cta">Explore Solution <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Healthcare -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a href="healthcare-telecalling-crm.html" class="industry-card-link">
+                    <div class="industry-card" style="background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);">
+                        <div class="industry-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4>Healthcare</h4>
+                        <p class="industry-desc">Hospitals, clinics, diagnostic centers, and medical equipment suppliers</p>
+                        <div class="industry-stats">
+                            <span><i class="fas fa-users"></i> 75+ Clients</span>
+                            <span><i class="fas fa-chart-line"></i> 40% Growth</span>
+                        </div>
+                        <span class="industry-cta">Explore Solution <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- E-commerce & Retail -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a href="ecommerce-telecalling-crm.html" class="industry-card-link">
+                    <div class="industry-card" style="background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);">
+                        <div class="industry-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4>E-commerce & Retail</h4>
+                        <p class="industry-desc">Online retailers, marketplaces, D2C brands, and customer support centers</p>
+                        <div class="industry-stats">
+                            <span><i class="fas fa-users"></i> 110+ Clients</span>
+                            <span><i class="fas fa-chart-line"></i> 60% Growth</span>
+                        </div>
+                        <span class="industry-cta">Explore Solution <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Travel & Hospitality -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a href="travel-telecalling-crm.html" class="industry-card-link">
+                    <div class="industry-card" style="background: linear-gradient(135deg, #1D2671 0%, #C33764 100%);">
+                        <div class="industry-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h4>Travel & Hospitality</h4>
+                        <p class="industry-desc">Travel agencies, hotels, airlines, and tour operators</p>
+                        <div class="industry-stats">
+                            <span><i class="fas fa-users"></i> 65+ Clients</span>
+                            <span><i class="fas fa-chart-line"></i> 48% Growth</span>
+                        </div>
+                        <span class="industry-cta">Explore Solution <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Automobile -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a href="automobile-telecalling-crm.html" class="industry-card-link">
+                    <div class="industry-card" style="background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);">
+                        <div class="industry-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4>Automobile</h4>
+                        <p class="industry-desc">Car dealerships, service centers, spare parts dealers, and vehicle finance</p>
+                        <div class="industry-stats">
+                            <span><i class="fas fa-users"></i> 85+ Clients</span>
+                            <span><i class="fas fa-chart-line"></i> 52% Growth</span>
+                        </div>
+                        <span class="industry-cta">Explore Solution <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- BPO & Call Centers -->
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a href="bpo-telecalling-crm.html" class="industry-card-link">
+                    <div class="industry-card" style="background: linear-gradient(135deg, #834d9b 0%, #d04ed6 100%);">
+                        <div class="industry-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>BPO & Call Centers</h4>
+                        <p class="industry-desc">Outsourcing companies, telemarketing agencies, and customer service centers</p>
+                        <div class="industry-stats">
+                            <span><i class="fas fa-users"></i> 140+ Clients</span>
+                            <span><i class="fas fa-chart-line"></i> 65% Growth</span>
+                        </div>
+                        <span class="industry-cta">Explore Solution <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Comparison Table Section (New) -->
     <section class="comparison-section">
         <div class="container">
@@ -1590,64 +1924,11 @@
     </section>
 
   </div>
+  
    <!-- Footer Component (Place at bottom of each page) -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <img src="images/linkarise-logo-white.webp" alt="LinkArise" class="mb-3" height="40">
-                <p class="mb-4">Complete CRM & ERP solutions designed for modern businesses. Simplify operations, boost productivity, and grow faster.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-            
-            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                <h5>Quick Links</h5>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="products.html">Products</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-                <h5>Products</h5>
-                <div class="footer-links">
-                    <a href="telecalling-crm.html">Telecalling CRM</a>
-                    <a href="sales-crm.html">Sales CRM</a>
-                    <a href="field-service-crm.html">Field Service CRM</a>
-                    <a href="overseas-education-crm.html">Overseas Education CRM</a>
-                    <a href="task-management-crm.html">Task Management CRM</a>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4">
-                <h5>Contact Info</h5>
-                <div class="footer-links">
-                    <p><i class="fa fa-map-marker mr-2"></i> Vadodara, Gujarat, India</p>
-                    <p><i class="fa fa-phone mr-2"></i> +91 6354454012</p>
-                    <p><i class="fa fa-envelope mr-2"></i> contact@linkarise.com</p>
-                    <p><i class="fa fa-clock mr-2"></i> Mon-Sat: 11AM - 5PM</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-12">
-                <div class="copyright">
-                    <p>&copy; 2024 LinkArise. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Bootstrap 5 JS Bundle -->
+    <script src="footer.js"></script>
+	
+	<!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     // Smooth scroll for anchor links

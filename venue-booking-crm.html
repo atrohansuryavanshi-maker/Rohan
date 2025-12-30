@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkArise VenueBooking CRM | Event & Venue Management Software</title>
+    <meta name="description" content="LinkArise VenueBooking CRM: All-in-one event and venue management platform for banquet halls, wedding venues, party plots, caterers, decorators, DJs, and event planners. Manage bookings, clients, vendors, payments, and events from a single dashboard.">
+    <meta name="keywords" content="venue management software, event booking CRM, banquet hall management, wedding venue software, party plot booking system, event planner CRM, catering management software">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.linkarise.in/venuebooking-crm.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="LinkArise VenueBooking CRM | Smart Event & Venue Management">
+    <meta property="og:description" content="All-in-one event and venue management platform for banquet halls, wedding venues, party plots, caterers, decorators, DJs, and event planners.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.linkarise.in/venuebooking-crm.html">
+    <meta property="og:image" content="https://www.linkarise.in/assets/images/venuebooking-crm-banner.webp">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "LinkArise VenueBooking CRM",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web-Based",
+        "description": "All-in-one event and venue management platform for banquet halls, wedding venues, party plots, caterers, decorators, DJs, and event planners.",
+        "url": "https://www.linkarise.in/venuebooking-crm.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Linkarise"
+        }
+    }
+    </script>
+    
+    <!-- CSS -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+    <style>
+        /* VenueBooking CRM Specific Styles */
+        .venue-hero {
+            background: linear-gradient(135deg, #003366 0%, #1a5276 100%);
+            color: white;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .venue-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .venue-hero .lead {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .hero-highlight {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .hero-highlight i {
+            color: #f58220;
+        }
+        
+        /* Section Styling */
+        .venue-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            color: #003366;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            color: #666;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+        }
+        
+        /* Target Audience Section */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .audience-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #f58220;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .audience-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .audience-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #f58220, #ff9c45);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .audience-icon i {
+            font-size: 30px;
+            color: white;
+        }
+        
+        .audience-card h4 {
+            color: #003366;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* Features Section */
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid #f58220;
+            height: 100%;
+        }
+        
+        .feature-card h4 {
+            color: #003366;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .feature-card h4 i {
+            color: #f58220;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: #f8f9fa;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .benefit-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: #f58220;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        
+        .benefit-icon i {
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .benefit-content h5 {
+            color: #003366;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        /* Add-Ons Section */
+        .addon-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecef;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .addon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .addon-card i {
+            font-size: 2.5rem;
+            color: #f58220;
+            margin-bottom: 20px;
+        }
+        
+        .addon-card h5 {
+            color: #003366;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        /* CTA Section */
+        .venue-cta {
+            background: linear-gradient(135deg, #f58220 0%, #ff9c45 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .venue-cta h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .venue-cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-light {
+            background: white;
+            color: #f58220;
+            font-weight: 600;
+            padding: 15px 35px;
+            border-radius: 50px;
+        }
+        
+        .btn-outline-light {
+            border: 2px solid white;
+            color: white;
+            font-weight: 600;
+            padding: 15px 35px;
+            border-radius: 50px;
+        }
+        
+        .btn-light:hover, .btn-outline-light:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .venue-hero {
+                padding: 70px 0 50px;
+            }
+            
+            .venue-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .venue-hero .lead {
+                font-size: 1.1rem;
+            }
+            
+            .hero-highlights {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .venue-cta h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 15px;
+            }
+        }
+        
+        /* Navigation dropdown fixes (same as index.html) */
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0; 
+            }
+            .dropdown-menu {
+                border-top: 10px solid transparent;
+                background-clip: padding-box;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .dropdown-menu.show {
+                display: block;
+            }
+        }
+        
+        /* Mobile dropdown styling */
+        @media (max-width: 991.98px) {
+            .dropdown-menu {
+                position: static !important;
+                float: none;
+                width: 100%;
+                margin-top: 0;
+                border: none;
+                box-shadow: none;
+                border-radius: 0;
+                background-color: #f8f9fa;
+            }
+            
+            .dropdown-item {
+                padding: 0.75rem 1.5rem;
+                border-bottom: 1px solid #e9ecef;
+            }
+            
+            .dropdown-item:last-child {
+                border-bottom: none;
+            }
+            
+            .mobile-only {
+                display: list-item;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .mobile-only {
+                display: none;
+            }
+        }
+		#feature{
+		margin-bottom:30px;
+		}
+    </style>
+</head>
+<body>
+  
+<!-- Header Component (Same as index.html) -->
+<script src="header.js"></script>
+
+<!-- Hero Section -->
+<section class="venue-hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1>Linkarise VenueBooking CRM</h1>
+                <p class="lead">The Smart Way to Manage Venues, Events & Bookings</p>
+                <p>Linkarise VenueBooking CRM is a powerful, all-in-one event and venue management platform built for banquet halls, party plots, wedding venues, caterers, decorators, DJs, and event planners. It helps you manage bookings, clients, vendors, payments, and events—everything from a single dashboard.</p>
+                
+                <div class="hero-highlights">
+                    <div class="hero-highlight">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Designed for Event Businesses</span>
+                    </div>
+                    <div class="hero-highlight">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Smart Booking & Lead Management</span>
+                    </div>
+                    <div class="hero-highlight">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Built for Growth & Scalability</span>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="contact.html" class="btn btn-light btn-lg me-3">Book Free Live Demo</a>
+                    <a href="#features" class="btn btn-outline-light btn-lg">Explore Features</a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                     alt="VenueBooking CRM Dashboard" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who Is It For? Section -->
+<section class="venue-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 class="section-title">Who Is VenueBooking CRM For?</h2>
+                <p class="section-subtitle">Linkarise VenueBooking CRM is designed specifically for event and venue businesses of all sizes.</p>
+            </div>
+        </div>
+        
+        <div class="audience-grid">
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h4>Banquet Halls & Marriage Gardens</h4>
+                <p>Manage bookings, availability, and events for wedding venues and banquet facilities.</p>
+            </div>
+            
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <h4>Party Plots & Open Venues</h4>
+                <p>Handle outdoor event bookings, vendor coordination, and event planning seamlessly.</p>
+            </div>
+            
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <i class="fas fa-ring"></i>
+                </div>
+                <h4>Wedding Planners & Decorators</h4>
+                <p>Coordinate with clients, manage vendors, and track event details from start to finish.</p>
+            </div>
+            
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h4>Caterers & Food Service Providers</h4>
+                <p>Manage event menus, inventory, staff assignments, and billing for catering services.</p>
+            </div>
+            
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h4>DJ & Entertainment Service Providers</h4>
+                <p>Track bookings, equipment, and performance schedules for entertainment services.</p>
+            </div>
+            
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h4>Event Management Companies</h4>
+                <p>End-to-end event planning and coordination for multiple clients and event types.</p>
+            </div>
+            
+            <div class="audience-card">
+                <div class="audience-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h4>Multi-venue & Franchise Owners</h4>
+                <p>Manage multiple locations, centralize reporting, and maintain brand consistency.</p>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <p class="lead">Whether you manage one venue or multiple locations, VenueBooking CRM adapts to your workflow.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="venue-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 class="section-title">Powerful Features for Event Businesses</h2>
+                <p class="section-subtitle">Take complete control of your event business with our comprehensive feature set</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Smart Booking Management -->
+            <div class="col-lg-6" id="feature">
+                <div class="feature-card">
+                    <h4><i class="fas fa-calendar-check"></i> Smart Booking Management</h4>
+                    <p>Take complete control of your bookings with an intelligent scheduling system.</p>
+                    <ul class="feature-list">
+                        <li>Real-time availability calendar</li>
+                        <li>Date-wise & time-slot-based bookings</li>
+                        <li>Instant booking confirmation</li>
+                        <li>Conflict & double-booking prevention</li>
+                        <li>Event status tracking (Inquiry → Confirmed → Completed)</li>
+                    </ul>
+                    <p class="mt-3"><strong>Result:</strong> Zero confusion, zero overbooking.</p>
+                </div>
+            </div>
+            
+            <!-- Lead & Inquiry Management -->
+            <div class="col-lg-6" id="feature">
+                <div class="feature-card" >
+                    <h4><i class="fas fa-phone-volume"></i> Lead & Inquiry Management</h4>
+                    <p>Never miss a potential customer again with our intelligent lead tracking system.</p>
+                    <ul class="feature-list">
+                        <li>Capture leads from website, WhatsApp, calls & walk-ins</li>
+                        <li>Auto-assign leads to staff</li>
+                        <li>Follow-up reminders & activity tracking</li>
+                        <li>Inquiry status (New, Follow-up, Converted, Lost)</li>
+                        <li>Lead source tracking & ROI analysis</li>
+                    </ul>
+                    <p class="mt-3"><strong>Outcome:</strong> Faster responses = higher conversions.</p>
+                </div>
+            </div>
+            
+            <!-- Vendor & Service Management -->
+            <div class="col-lg-6" id="feature">
+                <div class="feature-card">
+                    <h4><i class="fas fa-users-cog"></i> Vendor & Service Management</h4>
+                    <p>Manage all your service providers from one centralized platform.</p>
+                    <ul class="feature-list">
+                        <li>Vendor profiles (catering, decoration, DJ, lighting, etc.)</li>
+                        <li>Pricing & service packages</li>
+                        <li>Availability tracking</li>
+                        <li>Performance history & ratings</li>
+                        <li>Contract & agreement management</li>
+                    </ul>
+                    <p class="mt-3"><strong>Perfect for</strong> businesses offering complete event packages.</p>
+                </div>
+            </div>
+            
+            <!-- Payments & Invoicing -->
+            <div class="col-lg-6" id="feature">
+                <div class="feature-card">
+                    <h4><i class="fas fa-credit-card"></i> Payments, Invoicing & Revenue Tracking</h4>
+                    <p>Stay financially organized with built-in billing and payment tracking tools.</p>
+                    <ul class="feature-list">
+                        <li>Advance & balance payment tracking</li>
+                        <li>Professional invoice generation</li>
+                        <li>Payment status overview</li>
+                        <li>Revenue reports by date, event, or venue</li>
+                        <li>Tax calculation and financial reporting</li>
+                    </ul>
+                    <p class="mt-3"><strong>Know exactly</strong> how much you earn — and from where.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reports & Analytics Section -->
+<section class="venue-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                     alt="Analytics Dashboard" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-lg-7">
+                <h2 class="section-title text-start">Reports & Analytics Dashboard</h2>
+                <p class="lead">Make data-driven decisions with real-time insights about your event business.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h5>Booking Trends</h5>
+                                <p>Analyze seasonal patterns and booking trends to optimize pricing and marketing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h5>Revenue Analytics</h5>
+                                <p>Track revenue streams, identify profitable services, and forecast future earnings.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h5>Lead Conversion Ratio</h5>
+                                <p>Measure how many inquiries convert to bookings and optimize your sales process.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h5>Staff Performance</h5>
+                                <p>Monitor team productivity, track tasks completed, and identify top performers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mt-4"><strong>Visual dashboards</strong> help you plan smarter and scale your event business faster.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mobile & Cloud Section -->
+<section class="venue-section benefits-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 class="section-title">Mobile-Friendly & Cloud Based</h2>
+                <p class="section-subtitle">Access your venue management system from anywhere, on any device</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div class="benefit-icon" style="margin: 0 auto 20px;">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h4>Access Anywhere</h4>
+                <p>Manage your entire operation from mobile, tablet, or desktop with our responsive interface.</p>
+            </div>
+            
+            <div class="col-md-4 text-center mb-4">
+                <div class="benefit-icon" style="margin: 0 auto 20px;">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h4>No Installation Required</h4>
+                <p>Web-based platform means no software installation, updates, or maintenance headaches.</p>
+            </div>
+            
+            <div class="col-md-4 text-center mb-4">
+                <div class="benefit-icon" style="margin: 0 auto 20px;">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Secure & Reliable</h4>
+                <p>Enterprise-grade security with automatic backups and 99.9% uptime guarantee.</p>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="lead">Multi-user access with roles & permissions lets your team collaborate efficiently.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Section -->
+<section class="venue-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 class="section-title">Why Choose Linkarise VenueBooking CRM?</h2>
+                <p class="section-subtitle">Built specifically for the unique needs of event and venue businesses</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h5>Industry-Specific Design</h5>
+                        <p>Built specifically for event & venue businesses, not a generic CRM adapted for events.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h5>Easy to Use</h5>
+                        <p>Intuitive interface with minimal learning curve—no technical skills required.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h5>Scalable for Growth</h5>
+                        <p>Grow from a single venue to multiple locations without changing systems.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h5>Reduces Manual Work</h5>
+                        <p>Automate repetitive tasks, minimize human errors, and free up time for strategy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h5>Improves Customer Experience</h5>
+                        <p>Faster responses, professional communication, and seamless booking process.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h5>Data-Driven Decisions</h5>
+                        <p>Make informed business decisions with comprehensive analytics and reporting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add-On Modules Section -->
+<section class="venue-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 class="section-title">Optional Add-On Modules</h2>
+                <p class="section-subtitle">Extend the functionality of your VenueBooking CRM with these powerful add-ons</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="addon-card">
+                    <i class="fas fa-globe"></i>
+                    <h5>Online Booking Website Integration</h5>
+                    <p>Allow customers to check availability and book directly from your website.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="addon-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h5>WhatsApp & SMS Notifications</h5>
+                    <p>Automated reminders, confirmations, and updates sent directly to clients.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="addon-card">
+                    <i class="fas fa-star"></i>
+                    <h5>Customer Feedback System</h5>
+                    <p>Collect reviews, ratings, and testimonials to build your reputation.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="addon-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h5>Multi-branch Management</h5>
+                    <p>Centralized control for multiple venues with location-specific reporting.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="addon-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h5>Custom Reports & Dashboard</h5>
+                    <p>Tailored analytics and KPIs specific to your business metrics.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="addon-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h5>API Integration</h5>
+                    <p>Connect with accounting tools, payment gateways, and other business software.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Perfect For Section -->
+<section class="venue-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h2 class="section-title text-start">Perfect For Growing Event Businesses</h2>
+                <p class="lead">Whether you manage one banquet hall or multiple event locations, Linkarise VenueBooking CRM helps you organize better, sell faster, and grow smarter.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h5>Centralized Operations</h5>
+                                <p>Manage all venues, events, and teams from a single dashboard.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h5>Increased Efficiency</h5>
+                                <p>Reduce manual work by up to 70% with automated processes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h5>Better Customer Service</h5>
+                                <p>Respond faster, follow up systematically, and deliver exceptional experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="benefit-content">
+                                <h5>Data-Backed Growth</h5>
+                                <p>Identify opportunities and make informed decisions with comprehensive analytics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-5">
+                <img src="images/event-grwoing.webp" 
+                     alt="Event Business Growth" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="venue-cta">
+    <div class="container">
+        <h2>Ready to Simplify Your Event Business?</h2>
+        <p>Start using Linkarise VenueBooking CRM today and transform how you manage venues, bookings, and events.</p>
+        
+        <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-light btn-lg">Request a Demo</a>
+            <a href="tel:+916354454012" class="btn btn-outline-light btn-lg">Get Free Consultation</a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg">Launch Your Digital Booking System</a>
+        </div>
+        
+        <p class="mt-4" style="font-size: 1rem;">Join 500+ event businesses already using Linkarise CRM to grow their operations.</p>
+    </div>
+</section>
+
+<!-- Footer Component (Same as index.html) -->
+    <script src="footer.js"></script>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if(targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Products dropdown handling for mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const productsDropdownMobile = document.getElementById('productsDropdownMobile');
+        const productsDropdownDesktop = document.getElementById('productsDropdownDesktop');
+        const dropdownMenu = productsDropdownMobile.nextElementSibling;
+        let isMobile = window.innerWidth < 992;
+        
+        // Update on resize
+        window.addEventListener('resize', function() {
+            isMobile = window.innerWidth < 992;
+        });
+        
+        // Handle click on Products link (mobile)
+        if(productsDropdownMobile) {
+            productsDropdownMobile.addEventListener('click', function(e) {
+                if (isMobile) {
+                    e.preventDefault();
+                    dropdownMenu.classList.toggle('show');
+                }
+            });
+        }
+        
+        // Hide dropdown when clicking outside on mobile
+        document.addEventListener('click', function(e) {
+            if (isMobile && productsDropdownMobile && !productsDropdownMobile.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
+</body>
+</html>

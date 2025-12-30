@@ -338,53 +338,358 @@
         margin-right: 15px;
         font-size: 1.2rem;
     }
+    a{
+	text-decoration:none;}/* Industries We Serve Section Styles for Sales CRM */
+.industry-card-sales {
+    background: white;
+    border-radius: 10px;
+    padding: 25px 20px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-top: 4px solid #667eea;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.industry-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.industry-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+    transform: translateY(-5px);
+}
+
+.industry-card-link:hover .industry-card-sales {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.industry-card-sales:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.industry-icon-sales {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.industry-icon-sales i {
+    font-size: 28px;
+    color: #667eea;
+}
+
+.industry-card-sales h5 {
+    color: #003366;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    min-height: 56px;
+}
+
+.industry-card-sales p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    min-height: 70px;
+}
+
+.industry-features-sales {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.industry-features-sales span {
+    background-color: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Hover effect for entire card */
+.industry-card-link:hover .industry-card-sales:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03), rgba(118, 75, 162, 0.03));
+    z-index: 0;
+}
+
+.industry-card-link:hover .industry-icon-sales {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.industry-card-link:hover .industry-features-sales span {
+    background-color: rgba(102, 126, 234, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .industry-card-sales {
+        padding: 20px 15px;
+    }
     
+    .industry-card-sales h5 {
+        font-size: 1.1rem;
+        min-height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .industry-card-sales p {
+        min-height: auto;
+        font-size: 0.85rem;
+    }
+    
+    .industry-icon-sales {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .industry-icon-sales i {
+        font-size: 24px;
+    }
+}
+	/* Industries We Serve Section Styles for Sales CRM */
+.industry-card-sales {
+    background: white;
+    border-radius: 10px;
+    padding: 25px 20px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-top: 4px solid #667eea;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.industry-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.industry-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+    transform: translateY(-5px);
+}
+
+.industry-card-link:hover .industry-card-sales {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.industry-card-sales:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.industry-icon-sales {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.industry-icon-sales i {
+    font-size: 28px;
+    color: #667eea;
+}
+
+.industry-card-sales h5 {
+    color: #003366;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    min-height: 56px;
+}
+
+.industry-card-sales p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    min-height: 70px;
+}
+
+.industry-features-sales {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.industry-features-sales span {
+    background-color: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Hover effect for entire card */
+.industry-card-link:hover .industry-card-sales:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03), rgba(118, 75, 162, 0.03));
+    z-index: 0;
+}
+
+.industry-card-link:hover .industry-icon-sales {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.industry-card-link:hover .industry-features-sales span {
+    background-color: rgba(102, 126, 234, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .industry-card-sales {
+        padding: 20px 15px;
+    }
+    
+    .industry-card-sales h5 {
+        font-size: 1.1rem;
+        min-height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .industry-card-sales p {
+        min-height: auto;
+        font-size: 0.85rem;
+    }
+    
+    .industry-icon-sales {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .industry-icon-sales i {
+        font-size: 24px;
+    }
+}
+		/* Products dropdown for mobile only */
+@media (max-width: 991.98px) {
+    /* Show dropdown menu when toggled */
+    .dropdown-menu.show {
+        display: block;
+    }
+    
+    /* Mobile dropdown styling */
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #f8f9fa;
+    }
+    
+    .dropdown-item {
+        padding: 0.75rem 1.5rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Desktop: Hover behavior (optional) */
+@media (min-width: 992px) {
+    /* You can add hover effect if you want */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+    
+    /* Hide the dropdown menu by default on desktop */
+    .nav-item.dropdown .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+    }
+    
+    /* Show dropdown on hover */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+/* Hide specific list item by default (desktop) */
+.mobile-only {
+  display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: list-item;
+  }
+}
     </style>
 </head>
 <body>
-    <!-- Header Component -->
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/linkarise-logo.webp" alt="LinkArise" height="50">
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="products.html" id="productsDropdown" role="button">
-                                Products
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="telecalling-crm.html">Telecalling CRM</a>
-                                <a class="dropdown-item" href="sales-crm.html">Sales CRM</a>
-                                <a class="dropdown-item" href="field-service-crm.html">Field Service CRM</a>
-                                <a class="dropdown-item" href="overseas-education-crm.html">Overseas Education CRM</a>
-                                <a class="dropdown-item" href="task-management-crm.html">Task Management CRM</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item ms-2">
-                            <a href="contact.html" class="btn btn-primary">Get Free Demo</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+     <!-- Header Component -->
+<script src="header.js"></script>
 
     <!-- Hero Section -->
     <section class="hero-section crm-hero">
@@ -734,6 +1039,163 @@
         </div>
     </section>
 
+<!-- Industries We Serve Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 text-center">
+                <h2 class="section-title">Industries We Serve</h2>
+                <p class="section-subtitle">Our Sales CRM is trusted by businesses across various sectors to streamline their sales operations</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Industry 1 -->
+            <div class="col-md-6 col-lg-3">
+                <a href="contact.html?industry=manufacturing" class="industry-card-link">
+                    <div class="industry-card-sales">
+                        <div class="industry-icon-sales">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h5>Manufacturing</h5>
+                        <p>Manage distributors, dealers, and bulk orders with quotation and inventory tracking.</p>
+                        <div class="industry-features-sales">
+                            <span>Dealer Management</span>
+                            <span>Bulk Orders</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 2 -->
+            <div class="col-md-6 col-lg-3">
+                <a href="contact.html?industry=distribution" class="industry-card-link">
+                    <div class="industry-card-sales">
+                        <div class="industry-icon-sales">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h5>Distribution & Wholesale</h5>
+                        <p>Track retailer orders, manage inventory, and streamline payment collections.</p>
+                        <div class="industry-features-sales">
+                            <span>Retailer Network</span>
+                            <span>Order Tracking</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 3 -->
+            <div class="col-md-6 col-lg-3">
+                <a href="contact.html?industry=services" class="industry-card-link">
+                    <div class="industry-card-sales">
+                        <div class="industry-icon-sales">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h5>Service Businesses</h5>
+                        <p>Manage service contracts, project proposals, and recurring billing efficiently.</p>
+                        <div class="industry-features-sales">
+                            <span>Service Contracts</span>
+                            <span>Project Proposals</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 4 -->
+            <div class="col-md-6 col-lg-3">
+                <a href="contact.html?industry=retail" class="industry-card-link">
+                    <div class="industry-card-sales">
+                        <div class="industry-icon-sales">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h5>Retail & E-commerce</h5>
+                        <p>Track leads from multiple channels, manage orders, and handle customer relationships.</p>
+                        <div class="industry-features-sales">
+                            <span>Multi-channel Sales</span>
+                            <span>Order Management</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 5 -->
+            <div class="col-md-6 col-lg-3">
+                <a href="contact.html?industry=real-estate" class="industry-card-link">
+                    <div class="industry-card-sales">
+                        <div class="industry-icon-sales">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h5>Real Estate</h5>
+                        <p>Manage property inquiries, track leads, and handle customer follow-ups systematically.</p>
+                        <div class="industry-features-sales">
+                            <span>Property Inquiries</span>
+                            <span>Lead Nurturing</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 6 -->
+            <div class="col-md-6 col-lg-3">
+                <a href="contact.html?industry=education" class="industry-card-link">
+                    <div class="industry-card-sales">
+                        <div class="industry-icon-sales">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5>Education & Training</h5>
+                        <p>Track course inquiries, manage student admissions, and handle fee collections.</p>
+                        <div class="industry-features-sales">
+                            <span>Course Inquiries</span>
+                            <span>Admission Tracking</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 7 -->
+            <div class="col-md-6 col-lg-3">
+                <a href="contact.html?industry=healthcare" class="industry-card-link">
+                    <div class="industry-card-sales">
+                        <div class="industry-icon-sales">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h5>Healthcare & Pharma</h5>
+                        <p>Manage doctor/hospital relationships, track orders, and handle distributor networks.</p>
+                        <div class="industry-features-sales">
+                            <span>Doctor Network</span>
+                            <span>Distributor Orders</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 8 -->
+            <div class="col-md-6 col-lg-3">
+                <a href="contact.html?industry=technology" class="industry-card-link">
+                    <div class="industry-card-sales">
+                        <div class="industry-icon-sales">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h5>IT & Technology</h5>
+                        <p>Track software/service leads, manage project proposals, and handle enterprise clients.</p>
+                        <div class="industry-features-sales">
+                            <span>Project Proposals</span>
+                            <span>Enterprise Clients</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-lg-12 text-center">
+                <p class="mb-3">Don't see your industry listed? <strong>Our CRM is customizable for any business type.</strong></p>
+                <a href="contact.html" class="btn btn-primary">Get Custom Solution Demo</a>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Testimonials -->
     <section class="section bg-light">
         <div class="container">
@@ -1004,62 +1466,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img src="images/linkarise-logo-white.webp" alt="LinkArise" class="mb-3" height="40">
-                    <p class="mb-4">Complete CRM & ERP solutions designed for modern businesses. Simplify operations, boost productivity, and grow faster.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                    <h5>Quick Links</h5>
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About Us</a>
-                        <a href="products.html">Products</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-                    <h5>Products</h5>
-                    <div class="footer-links">
-                        <a href="telecalling-crm.html">Telecalling CRM</a>
-                        <a href="sales-crm.html">Sales CRM</a>
-                        <a href="field-service-crm.html">Field Service CRM</a>
-                        <a href="overseas-education-crm.html">Overseas Education CRM</a>
-                        <a href="task-management-crm.html">Task Management CRM</a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-4">
-                    <h5>Contact Info</h5>
-                    <div class="footer-links">
-                        <p><i class="fa fa-map-marker mr-2"></i> Vadodara, Gujarat, India</p>
-                        <p><i class="fa fa-phone mr-2"></i> +91 6354454012</p>
-                        <p><i class="fa fa-envelope mr-2"></i> contact@linkarise.com</p>
-                        <p><i class="fa fa-clock mr-2"></i> Mon-Sat: 11AM - 5PM</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-12">
-                    <div class="copyright">
-                        <p>&copy; 2024 LinkArise. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        <script src="footer.js"></script>
     
     <!-- Scripts -->
     <script src="js/jquery-3.5.1.min.js"></script>

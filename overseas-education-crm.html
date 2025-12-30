@@ -328,54 +328,235 @@
                 margin-top: 30px;
             }
         }
+		 .problem-card {
+            background: #fff5f5;
+            border-left: 4px solid #ff6b6b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+			height:80px;
+        }
+/* Industries We Serve Section Styles */
+.industry-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.industry-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.industry-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-top: 4px solid #667eea;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.industry-card-link:hover .industry-card {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.industry-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.industry-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.industry-icon i {
+    font-size: 28px;
+    color: #667eea;
+}
+
+.industry-card h4 {
+    color: #003366;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.industry-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.industry-features {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.industry-features .badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    <!-- background-color: rgba(102, 126, 234, 0.1); -->
+    color: #667eea;
+    border-radius: 20px;
+}
+
+.industry-cta {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+.industry-link {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.industry-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.industry-card-link:hover .industry-link {
+    color: #764ba2;
+}
+
+.industry-card-link:hover .industry-link i {
+    transform: translateX(5px);
+}
+
+/* Hover effect for entire card */
+.industry-card-link:hover .industry-card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03), rgba(118, 75, 162, 0.03));
+    z-index: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .industry-card {
+        padding: 20px;
+    }
+    
+    .industry-card h4 {
+        font-size: 1.2rem;
+    }
+    
+    .industry-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .industry-icon i {
+        font-size: 24px;
+    }
+    
+    .industry-link {
+        font-size: 0.85rem;
+    }
+}
+		/* Products dropdown for mobile only */
+@media (max-width: 991.98px) {
+    /* Show dropdown menu when toggled */
+    .dropdown-menu.show {
+        display: block;
+    }
+    
+    /* Mobile dropdown styling */
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #f8f9fa;
+    }
+    
+    .dropdown-item {
+        padding: 0.75rem 1.5rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Desktop: Hover behavior (optional) */
+@media (min-width: 992px) {
+    /* You can add hover effect if you want */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+    
+    /* Hide the dropdown menu by default on desktop */
+    .nav-item.dropdown .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+    }
+    
+    /* Show dropdown on hover */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+/* Hide specific list item by default (desktop) */
+.mobile-only {
+  display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: list-item;
+  }
+}
     </style>
     <link rel="icon" href="images/LinkArise.webp" type="image/x-icon">
 </head>
 <body>
 
-<!-- Header Component (Stays Same) -->
-<header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/linkarise-logo.webp" alt="LinkArise" height="50">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="products.html" id="productsDropdown" role="button">
-                            Products
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="telecalling-crm.html">Telecalling CRM</a>
-                            <a class="dropdown-item" href="sales-crm.html">Sales CRM</a>
-                            <a class="dropdown-item" href="field-service-crm.html">Field Service CRM</a>
-                            <a class="dropdown-item" href="overseas-education-crm.html">Overseas Education CRM</a>
-                            <a class="dropdown-item" href="task-management-crm.html">Task Management CRM</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a href="contact.html" class="btn btn-primary">Get Free Demo</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+ <!-- Header Component -->
+<script src="header.js"></script>
 
 <!-- Hero Section -->
 <section class="hero-section">
@@ -401,21 +582,45 @@
     </div>
 </section>
 
-<!-- Problem Statement Section (New from overseas-education-crm.html) -->
+<!-- Problems Solved Section -->
 <section class="py-5 bg-light">
     <div class="container">
         <h2 class="section-title">Solve Overseas Education Challenges with Our CRM</h2>
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <ul class="problem-list">
-                    <li>Leads and inquiries scattered across WhatsApp, Excel, and email</li>
-                    <li>Missed follow-ups with students and prospects</li>
-                    <li>No structured tracking of applications and visa status</li>
-                    <li>Document mismanagement and duplication</li>
-                    <li>Manual invoicing and payment tracking</li>
-                    <li>No visibility on consultant or counselor work and performance</li>
-                    <li>Difficulty managing multiple countries, colleges, and visa processes</li>
-                </ul>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> Leads and inquiries scattered across WhatsApp, Excel, and email
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> Missed follow-ups with students and prospect
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i>No structured tracking of applications and visa status
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> Document mismanagement and duplication
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> Manual invoicing and payment tracking
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> No visibility on consultant or counselor work and performance
+                </div>
+            </div>
+			<div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i>Difficulty managing multiple countries, colleges, and visa processes
+                </div>
             </div>
         </div>
     </div>
@@ -653,6 +858,205 @@
     </div>
 </section>
 
+<!-- Industries We Serve Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Industries We Serve</h2>
+        <p class="text-center lead mb-5">Our specialized CRM solutions are tailored for various education and immigration service providers</p>
+        
+        <div class="row g-4">
+            <!-- Industry 1 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="overseas-education-crm.html" class="industry-card-link">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Overseas Education Consultants</h4>
+                        <p>Complete student management from inquiry to visa approval with college application tracking and document management.</p>
+                        <div class="industry-features">
+                            <span class="badge bg-primary">Student Pipeline</span>
+                            <span class="badge bg-primary">College Tracking</span>
+                            <span class="badge bg-primary">Document Management</span>
+                        </div>
+                        <div class="industry-cta">
+                            <span class="industry-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 2 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="immigration-visa-crm.html" class="industry-card-link">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <h4>Immigration & Visa Consultancy</h4>
+                        <p>Manage PR, work, tourist, and student visas with compliance tracking, document checklists, and deadline alerts.</p>
+                        <div class="industry-features">
+                            <span class="badge bg-primary">Visa Categories</span>
+                            <span class="badge bg-primary">Compliance Tracking</span>
+                            <span class="badge bg-primary">Document Checklist</span>
+                        </div>
+                        <div class="industry-cta">
+                            <span class="industry-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 3 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="language-training-crm.html" class="industry-card-link">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4>IELTS, PTE & Language Training</h4>
+                        <p>Manage student batches, test schedules, score tracking, and follow-ups for language proficiency test preparation.</p>
+                        <div class="industry-features">
+                            <span class="badge bg-primary">Batch Management</span>
+                            <span class="badge bg-primary">Score Tracking</span>
+                            <span class="badge bg-primary">Test Scheduling</span>
+                        </div>
+                        <div class="industry-cta">
+                            <span class="industry-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 4 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="student-travel-crm.html" class="industry-card-link">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h4>Student Travel & Ticketing Agencies</h4>
+                        <p>Manage flight bookings, student discounts, group travel, and post-booking support for international students.</p>
+                        <div class="industry-features">
+                            <span class="badge bg-primary">Flight Bookings</span>
+                            <span class="badge bg-primary">Group Travel</span>
+                            <span class="badge bg-primary">Student Discounts</span>
+                        </div>
+                        <div class="industry-cta">
+                            <span class="industry-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 5 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="education-loan-crm.html" class="industry-card-link">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4>Education Loan & Financial Services</h4>
+                        <p>Track loan applications, document verification, approval stages, and student financial counseling sessions.</p>
+                        <div class="industry-features">
+                            <span class="badge bg-primary">Loan Tracking</span>
+                            <span class="badge bg-primary">Document Verification</span>
+                            <span class="badge bg-primary">Financial Counseling</span>
+                        </div>
+                        <div class="industry-cta">
+                            <span class="industry-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 6 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="student-accommodation-crm.html" class="industry-card-link">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>Student Accommodation & Housing</h4>
+                        <p>Manage student housing requests, room allocation, lease agreements, and maintenance services for international students.</p>
+                        <div class="industry-features">
+                            <span class="badge bg-primary">Room Allocation</span>
+                            <span class="badge bg-primary">Lease Management</span>
+                            <span class="badge bg-primary">Maintenance Services</span>
+                        </div>
+                        <div class="industry-cta">
+                            <span class="industry-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 7 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="internship-placement-crm.html" class="industry-card-link">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Overseas Internship & Placement Providers</h4>
+                        <p>Track internship applications, employer partnerships, visa sponsorship, and student placement status.</p>
+                        <div class="industry-features">
+                            <span class="badge bg-primary">Internship Tracking</span>
+                            <span class="badge bg-primary">Employer Partnerships</span>
+                            <span class="badge bg-primary">Placement Status</span>
+                        </div>
+                        <div class="industry-cta">
+                            <span class="industry-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 8 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="university-representatives-crm.html" class="industry-card-link">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4>University Representatives & Agents</h4>
+                        <p>Manage student referrals, commission tracking, university partnerships, and application processing for multiple institutions.</p>
+                        <div class="industry-features">
+                            <span class="badge bg-primary">Commission Tracking</span>
+                            <span class="badge bg-primary">University Partnerships</span>
+                            <span class="badge bg-primary">Student Referrals</span>
+                        </div>
+                        <div class="industry-cta">
+                            <span class="industry-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Industry 9 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="student-insurance-crm.html" class="industry-card-link">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Student Insurance Providers</h4>
+                        <p>Manage health insurance policies, claim processing, student enrollment, and policy renewals for international students.</p>
+                        <div class="industry-features">
+                            <span class="badge bg-primary">Policy Management</span>
+                            <span class="badge bg-primary">Claim Processing</span>
+                            <span class="badge bg-primary">Renewal Tracking</span>
+                        </div>
+                        <div class="industry-cta">
+                            <span class="industry-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- FAQ Section (New from overseas-education-crm.html) -->
 <section class="py-5 bg-light">
     <div class="container">
@@ -741,62 +1145,7 @@
 </section>
 
 <!-- Footer Component (Stays Same) -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <img src="images/linkarise-logo-white.webp" alt="LinkArise" class="mb-3" height="40">
-                <p class="mb-4">Complete CRM & ERP solutions designed for modern businesses. Simplify operations, boost productivity, and grow faster.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            
-            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                <h5>Quick Links</h5>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="products.html">Products</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-                <h5>Products</h5>
-                <div class="footer-links">
-                    <a href="telecalling-crm.html">Telecalling CRM</a>
-                    <a href="sales-crm.html">Sales CRM</a>
-                    <a href="field-service-crm.html">Field Service CRM</a>
-                    <a href="overseas-education-crm.html">Overseas Education CRM</a>
-                    <a href="task-management-crm.html">Task Management CRM</a>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4">
-                <h5>Contact Info</h5>
-                <div class="footer-links">
-                    <p><i class="fas fa-map-marker-alt me-2"></i> Vadodara, Gujarat, India</p>
-                    <p><i class="fas fa-phone me-2"></i> +91 6354454012</p>
-                    <p><i class="fas fa-envelope me-2"></i> contact@linkarise.com</p>
-                    <p><i class="fas fa-clock me-2"></i> Mon-Sat: 11AM - 5PM</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-12">
-                <div class="copyright">
-                    <p>&copy; 2024 LinkArise. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    <script src="footer.js"></script>
 
 <!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

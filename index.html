@@ -167,6 +167,42 @@
     font-size: 16px;
     margin-bottom: 15px;
 }
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .transformation-section .row {
+        flex-direction: column;
+    }
+    
+    .transformation-points {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .transformation-points li {
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .transformation-points li:before {
+        flex-shrink: 0;
+        margin-right: 15px;
+        margin-bottom: 0;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .transformation-points li span {
+        flex: 1;
+    }
+	
+}
 		
 		        
         
@@ -270,6 +306,7 @@
             color: #666;
             line-height: 1.6;
         }
+
         
         /* Stats Section Enhancement */
         .stat-box {
@@ -315,54 +352,76 @@
     .sloution-list li:hover {
         transform: translateY(-5px);
     }
+/* Products dropdown for mobile only */
+@media (max-width: 991.98px) {
+    /* Show dropdown menu when toggled */
+    .dropdown-menu.show {
+        display: block;
+    }
+    
+    /* Mobile dropdown styling */
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #f8f9fa;
+    }
+    
+    .dropdown-item {
+        padding: 0.75rem 1.5rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Desktop: Hover behavior (optional) */
+@media (min-width: 992px) {
+    /* You can add hover effect if you want */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+    
+    /* Hide the dropdown menu by default on desktop */
+    .nav-item.dropdown .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+    }
+    
+    /* Show dropdown on hover */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+/* Hide specific list item by default (desktop) */
+.mobile-only {
+  display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: list-item;
+  }
+}
+#benefit{
+		margin-top:20px;
+		}
+
     </style>
 </head>
 <body>
-    <!-- Header Component -->
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/linkarise-logo.webp" alt="LinkArise" height="50">
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="products.html" id="productsDropdown" role="button">
-                                Products
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="telecalling-crm.html">Telecalling CRM</a>
-                                <a class="dropdown-item" href="sales-crm.html">Sales CRM</a>
-                                <a class="dropdown-item" href="field-service-crm.html">Field Service CRM</a>
-                                <a class="dropdown-item" href="overseas-education-crm.html">Overseas Education CRM</a>
-                                <a class="dropdown-item" href="task-management-crm.html">Task Management CRM</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item ms-2">
-                            <a href="contact.html" class="btn btn-primary">Get Free Demo</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
+  
+<script src="header.js"></script>
+  <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center">
@@ -403,7 +462,8 @@
             </div>
             
             <div class="row">
-                <div class="col-md-4">
+			
+                <div class="col-md-4" id="benefit">
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fas fa-briefcase"></i>
@@ -412,7 +472,8 @@
                         <p>Complete solution for multiple industries and workflows in one integrated platform.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+				
+                <div class="col-md-4" id="benefit">
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fas fa-chart-line"></i>
@@ -421,7 +482,8 @@
                         <p>Automate processes to increase efficiency and drive more sales with intelligent workflows.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+				
+                <div class="col-md-4" id="benefit">
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fas fa-user-friends"></i>
@@ -430,9 +492,9 @@
                         <p>Minimal learning curve with intuitive design that your team will love to use daily.</p>
                     </div>
                 </div>
-				<hr style="color:white;">
-				<hr style="color:white;">
-                <div class="col-md-4">
+				<!-- <hr style="color:white;"> -->
+				<!-- <hr style="color:white;"> -->
+                <div class="col-md-4" id="benefit">
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fas fa-tachometer-alt"></i>
@@ -442,7 +504,7 @@
                     </div>
                 </div>
 				
-                <div class="col-md-4">
+                <div class="col-md-4" id="benefit">
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fas fa-cogs"></i>
@@ -451,7 +513,8 @@
                         <p>Tailor the CRM to match your specific business processes and requirements perfectly.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+				
+                <div class="col-md-4" id="benefit">
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fas fa-mobile-alt"></i>
@@ -460,6 +523,7 @@
                         <p>Access your business from anywhere with our responsive web app and mobile applications.</p>
                     </div>
                 </div>
+				
             </div>
         </div>
     </section>
@@ -685,63 +749,7 @@
     </section>
 
     <!-- Footer Component -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img src="images/linkarise-logo-white.webp" alt="LinkArise" class="mb-3" height="40">
-                    <p class="mb-4">Complete CRM & ERP solutions designed for modern businesses. Simplify operations, boost productivity, and grow faster.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                    <h5>Quick Links</h5>
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About Us</a>
-                        <a href="products.html">Products</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-                    <h5>Products</h5>
-                    <div class="footer-links">
-                        <a href="telecalling-crm.html">Telecalling CRM</a>
-                        <a href="sales-crm.html">Sales CRM</a>
-                        <a href="field-service-crm.html">Field Service CRM</a>
-                        <a href="overseas-education-crm.html">Overseas Education CRM</a>
-                        <a href="task-management-crm.html">Task Management CRM</a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-4">
-                    <h5>Contact Info</h5>
-                    <div class="footer-links">
-                        <p><i class="fas fa-map-marker-alt me-2"></i> Vadodara, Gujarat, India</p>
-                        <p><i class="fas fa-phone me-2"></i> +91 6354454012</p>
-                        <p><i class="fas fa-envelope me-2"></i> contact@linkarise.com</p>
-                        <p><i class="fas fa-clock me-2"></i> Mon-Sat: 11AM - 5PM</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-12">
-                    <div class="copyright">
-                        <p>&copy; 2024 LinkArise. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <script src="footer.js"></script>
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -762,5 +770,72 @@
             });
         });
     </script>
+	<script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if(targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Fix for Products dropdown - SIMPLE AND WORKING VERSION
+    document.addEventListener('DOMContentLoaded', function() {
+        const productsLink = document.getElementById('productsDropdown');
+        const dropdownMenu = productsLink.nextElementSibling;
+        let isMobile = window.innerWidth < 992;
+        
+        // Update on resize
+        window.addEventListener('resize', function() {
+            isMobile = window.innerWidth < 992;
+        });
+        
+        // Handle click on Products link
+        productsLink.addEventListener('click', function(e) {
+            if (isMobile) {
+                // Mobile: prevent navigation and toggle dropdown
+                e.preventDefault();
+                dropdownMenu.classList.toggle('show');
+            }
+            // Desktop: do nothing, let the link work normally (go to products.html)
+        });
+        
+        // Handle hover for desktop
+        if (!isMobile) {
+            const navItem = productsLink.closest('.nav-item.dropdown');
+            
+            navItem.addEventListener('mouseenter', function() {
+                dropdownMenu.classList.add('show');
+            });
+            
+            navItem.addEventListener('mouseleave', function() {
+                dropdownMenu.classList.remove('show');
+            });
+            
+            // Also hide dropdown when clicking anywhere else on desktop
+            document.addEventListener('click', function(e) {
+                if (!navItem.contains(e.target)) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+        }
+        
+        // Hide dropdown when clicking outside on mobile
+        document.addEventListener('click', function(e) {
+            if (isMobile && !productsLink.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
 </body>
 </html>

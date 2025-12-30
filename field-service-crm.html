@@ -357,54 +357,151 @@
             display: block;
         }
     }
+	 .problem-card {
+            background: #fff5f5;
+            border-left: 4px solid #ff6b6b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+		/* Industries We Serve Styles */
+.industry-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #3498db;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.industry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.industry-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.industry-card h4 {
+    color: #003366;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+}
+
+.industry-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.industry-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.industry-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.industry-link:hover {
+    color: #f5576c;
+}
+
+.industry-link:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .industry-card {
+        padding: 20px;
+    }
+    
+    .industry-icon {
+        font-size: 2rem;
+        height: 50px;
+    }
+}
+		/* Products dropdown for mobile only */
+@media (max-width: 991.98px) {
+    /* Show dropdown menu when toggled */
+    .dropdown-menu.show {
+        display: block;
+    }
+    
+    /* Mobile dropdown styling */
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #f8f9fa;
+    }
+    
+    .dropdown-item {
+        padding: 0.75rem 1.5rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Desktop: Hover behavior (optional) */
+@media (min-width: 992px) {
+    /* You can add hover effect if you want */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+    
+    /* Hide the dropdown menu by default on desktop */
+    .nav-item.dropdown .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+    }
+    
+    /* Show dropdown on hover */
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+/* Hide specific list item by default (desktop) */
+.mobile-only {
+  display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: list-item;
+  }
+}
     </style>
     <link rel="icon" href="images/LinkArise.webp" type="image/x-icon">
 </head>
 <body>
 
-<!-- Header Component (Remains Same) -->
-<header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/linkarise-logo.webp" alt="LinkArise" height="50">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="products.html" id="productsDropdown" role="button">
-                            Products
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="telecalling-crm.html">Telecalling CRM</a>
-                            <a class="dropdown-item" href="sales-crm.html">Sales CRM</a>
-                            <a class="dropdown-item" href="field-service-crm.html">Field Service CRM</a>
-                            <a class="dropdown-item" href="overseas-education-crm.html">Overseas Education CRM</a>
-                            <a class="dropdown-item" href="task-management-crm.html">Task Management CRM</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a href="contact.html" class="btn btn-primary">Get Free Demo</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+ <!-- Header Component -->
+<script src="header.js"></script>
 
 <!-- Hero Section -->
 <section class="hero-section">
@@ -461,21 +558,41 @@
     </div>
 </section>
 
-<!-- Problems Section (New from field-service-crm.html) -->
+
+
+<!-- Problems Solved Section -->
 <section class="py-5 bg-light">
     <div class="container">
         <h2 class="section-title">Solve Field Service Challenges with Our CRM</h2>
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="content-card">
-                    <ul class="problem-list">
-                        <li>AMC contracts tracked manually or forgotten</li>
-                        <li>Missed service visits and renewal follow-ups</li>
-                        <li>No real-time visibility of field engineers</li>
-                        <li>Manual job assignment and paperwork</li>
-                        <li>Delayed invoicing and payment follow-ups</li>
-                        <li>No structured service or visit reports</li>
-                    </ul>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> AMC contracts tracked manually or forgotten
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> Missed service visits and renewal follow-ups
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i>No real-time visibility of field engineers
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> Manual job assignment and paperwork
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> Delayed invoicing and payment follow-ups
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="problem-card">
+                    <i class="fas fa-times-circle text-danger me-2"></i> No structured service or visit reports
                 </div>
             </div>
         </div>
@@ -572,6 +689,112 @@
 				                <div class="efficiency-card">
                     <!-- <p >Field Service CRM replaces manual coordination with a structured workflow where jobs, engineers, contracts, and billing are connected.</p> -->
                     <p class="lead">Managers gain real-time visibility into service operations while engineers focus on completing jobs efficiently instead of paperwork.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Industries We Serve Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Industries We Serve</h2>
+        <p class="text-center mb-5 lead">Our Field Service CRM is tailored for various service-based industries with AMC, maintenance, and on-field operations.</p>
+        
+        <div class="row g-4">
+            <!-- Industry 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="industry-card h-100">
+                    <div class="industry-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h4>HVAC Services</h4>
+                    <p>Manage AMC contracts, preventive maintenance schedules, and technician tracking for heating, ventilation, and air conditioning businesses.</p>
+                    <a href="contact.html?industry=hvac" class="industry-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Industry 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="industry-card h-100">
+                    <div class="industry-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Electrical Services</h4>
+                    <p>Schedule electricians, track service jobs, manage warranties, and handle emergency breakdown calls efficiently.</p>
+                    <a href="contact.html?industry=electrical" class="industry-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Industry 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="industry-card h-100">
+                    <div class="industry-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>Equipment Maintenance</h4>
+                    <p>Manage service contracts for machinery, track maintenance history, and schedule preventive visits with digital reports.</p>
+                    <a href="contact.html?industry=equipment" class="industry-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Industry 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="industry-card h-100">
+                    <div class="industry-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Security Systems</h4>
+                    <p>Handle AMC for CCTV, alarms, and access control systems with automated service reminders and engineer dispatch.</p>
+                    <a href="contact.html?industry=security" class="industry-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Industry 5 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="industry-card h-100">
+                    <div class="industry-icon">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h4>Medical Equipment</h4>
+                    <p>Compliance-focused service tracking for medical devices with audit trails, calibration records, and contract management.</p>
+                    <a href="contact.html?industry=medical" class="industry-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Industry 6 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="industry-card h-100">
+                    <div class="industry-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Fleet Maintenance</h4>
+                    <p>Schedule vehicle servicing, track mechanic assignments, manage service history, and handle breakdown jobs.</p>
+                    <a href="contact.html?industry=fleet" class="industry-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Industry 7 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="industry-card h-100">
+                    <div class="industry-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h4>Fire Safety</h4>
+                    <p>Manage periodic inspections, equipment servicing, compliance certificates, and emergency service calls.</p>
+                    <a href="contact.html?industry=fire-safety" class="industry-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Industry 8 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="industry-card h-100">
+                    <div class="industry-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h4>IT & Network Services</h4>
+                    <p>Handle SLA-based contracts, remote and on-site support tickets, technician dispatch, and asset management.</p>
+                    <a href="contact.html?industry=it" class="industry-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -712,63 +935,8 @@
 </section>
 
 <!-- Footer Component (Remains Same) -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <img src="images/linkarise-logo-white.webp" alt="LinkArise" class="mb-3" height="40">
-                <p class="mb-4">Complete CRM & ERP solutions designed for modern businesses. Simplify operations, boost productivity, and grow faster.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            
-            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
-                <h5>Quick Links</h5>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="products.html">Products</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
-                <h5>Products</h5>
-                <div class="footer-links">
-                    <a href="telecalling-crm.html">Telecalling CRM</a>
-                    <a href="sales-crm.html">Sales CRM</a>
-                    <a href="field-service-crm.html">Field Service CRM</a>
-                    <a href="overseas-education-crm.html">Overseas Education CRM</a>
-                    <a href="task-management-crm.html">Task Management CRM</a>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4">
-                <h5>Contact Info</h5>
-                <div class="footer-links">
-                    <p><i class="fas fa-map-marker-alt me-2"></i> Vadodara, Gujarat, India</p>
-                    <p><i class="fas fa-phone me-2"></i> +91 6354454012</p>
-                    <p><i class="fas fa-envelope me-2"></i> contact@linkarise.com</p>
-                    <p><i class="fas fa-clock me-2"></i> Mon-Sat: 11AM - 5PM</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-12">
-                <div class="copyright">
-                    <p>&copy; 2024 LinkArise. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
+    <script src="footer.js"></script>
+	
 <!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>

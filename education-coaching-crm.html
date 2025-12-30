@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education CRM Software | Coaching Center CRM - LinkArise</title>
+    <meta name="description" content="LinkArise Education CRM helps coaching centers, training institutes, and online education platforms manage inquiries, admissions, and student lifecycle efficiently.">
+    <meta name="keywords" content="education CRM, coaching center software, student management system, admission tracking, education institute CRM, training center CRM, online course platform CRM">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.linkarise.in/education-crm">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Education CRM Software | Coaching Center Management System">
+    <meta property="og:description" content="Complete CRM solution for education institutes to manage inquiries, admissions, student lifecycle, and counselor performance tracking.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.linkarise.in/education-crm">
+    <meta property="og:image" content="https://www.linkarise.in/assets/images/education-crm-dashboard.webp">
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "LinkArise Education CRM",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Android, iOS",
+        "description": "Complete CRM solution for education institutes to manage inquiries, admissions, student lifecycle, and counselor performance tracking.",
+        "offers": {
+            "@type": "Offer",
+            "price": "1299",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "280"
+        }
+    }
+    </script>
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Hero Section */
+        .education-hero {
+            background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        /* Challenge Section */
+        .challenge-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .challenge-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid #e74c3c;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .challenge-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 30px;
+        }
+        
+        /* Solutions Section */
+        .solution-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #8e2de2;
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .solution-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        /* Features Section */
+        .features-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card .icon {
+            width: 50px;
+            height: 50px;
+            background: #9b59b6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        
+        /* Use Cases Section */
+        .use-case-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .use-case-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 30px;
+        }
+        
+        /* Benefits Section */
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: #2ecc71;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            color: white;
+        }
+        
+        /* Why Choose Section */
+        .why-choose-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 10px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #3498db;
+        }
+        
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 30px;
+        }
+        
+        /* FAQ Styles */
+        .faq-accordion .accordion-button {
+            background-color: white;
+            color: #2c3e50;
+            font-weight: 600;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px !important;
+            margin-bottom: 10px;
+        }
+        
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background-color: #9b59b6;
+            color: white;
+            border-color: #9b59b6;
+        }
+        
+        .faq-accordion .accordion-body {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        /* Stats Section */
+        .stat-box {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #8e2de2;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .education-hero {
+                padding: 60px 0;
+            }
+            
+            .challenge-section,
+            .features-section {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Navigation Styles */
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+            .dropdown-menu {
+                border-top: 10px solid transparent;
+                background-clip: padding-box;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .dropdown-menu.show {
+                display: block;
+            }
+        }
+        
+        /* CTA Button Styles */
+        .btn-gradient-education {
+            background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient-education:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(142, 45, 226, 0.3);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component (Same as index.html) -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/linkarise-logo.webp" alt="LinkArise" height="50">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="products.html" id="productsDropdown" role="button">
+                                Products
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="telecalling-crm.html">Telecalling CRM</a>
+                                <a class="dropdown-item" href="sales-crm.html">Sales CRM</a>
+                                <a class="dropdown-item" href="field-service-crm.html">Field Service CRM</a>
+                                <a class="dropdown-item" href="overseas-education-crm.html">Overseas Education CRM</a>
+                                <a class="dropdown-item" href="task-management-crm.html">Task Management CRM</a>
+                                <a class="dropdown-item" href="real-estate-crm.html">Real Estate CRM</a>
+                                <!-- Add Education CRM to dropdown -->
+                                <a class="dropdown-item active" href="education-coaching-crm.html">Education & Coaching CRM</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a href="contact.html" class="btn btn-primary">Get Free Demo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="education-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fw-bold mb-4">CRM for Education Institutes & Coaching Centers</h1>
+                    <p class="lead mb-4">Streamline admissions, manage student lifecycle, and boost enrollment with our dedicated education CRM platform designed for modern educational institutions.</p>
+                    
+                    <div class="mb-4">
+                        <span class="badge bg-light text-dark me-2 mb-2 p-2">Admission Tracking</span>
+                        <span class="badge bg-light text-dark me-2 mb-2 p-2">Student Management</span>
+                        <span class="badge bg-light text-dark me-2 mb-2 p-2">Counselor Tracking</span>
+                        <span class="badge bg-light text-dark mb-2 p-2">Batch Management</span>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="contact.html" class="btn btn-light btn-lg me-3">Book Free Demo</a>
+                        <a href="#features" class="btn btn-outline-light btn-lg">Explore Features</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Education CRM Dashboard" 
+                         class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Challenges Section -->
+    <section class="challenge-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Education Industry Challenges</h2>
+                    <p class="section-subtitle">Common problems faced by education institutes that affect growth and efficiency</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5>High Inquiry Volume</h5>
+                        <p>Managing hundreds of inquiries daily across multiple channels without a centralized system leads to missed opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-calendar-times"></i>
+                        </div>
+                        <h5>Missed Follow-ups</h5>
+                        <p>Manual follow-up tracking results in lost leads and poor conversion rates during admission seasons.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5>Poor Admission Tracking</h5>
+                        <p>No clear visibility on admission pipeline, conversion rates, and counselor performance metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-box">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Higher Enrollment Rate</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-box">
+                        <span class="stat-number">50%</span>
+                        <span class="stat-label">Reduced Admin Work</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-box">
+                        <span class="stat-number">60%</span>
+                        <span class="stat-label">Faster Follow-ups</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-box">
+                        <span class="stat-number">300+</span>
+                        <span class="stat-label">Education Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRM Solutions for Education -->
+    <section class="section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">CRM Solutions for Education</h2>
+                    <p class="section-subtitle">Transform your education institute with intelligent CRM solutions</p>
+                </div>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-funnel-dollar"></i>
+                        </div>
+                        <h4>Inquiry to Admission Tracking</h4>
+                        <p>Track every inquiry from first contact to enrollment with complete pipeline visibility. Monitor conversion rates at each stage and identify bottlenecks in your admission process.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Multi-channel inquiry capture</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Admission pipeline management</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Conversion analytics</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Lead scoring and prioritization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4>Student Lifecycle Management</h4>
+                        <p>Manage the complete student journey from inquiry to alumni with integrated modules for admission, academics, fee management, and post-course follow-ups.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Complete student profile</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Academic progress tracking</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Fee and payment management</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Alumni relationship management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Key Features</h2>
+                    <p class="section-subtitle">Essential features designed specifically for education institutes</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h5>Course-wise Lead Tracking</h5>
+                        <p>Track inquiries and admissions separately for each course. Analyze which courses attract the most interest and have the highest conversion rates.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h5>Counselor Performance Tracking</h5>
+                        <p>Monitor counselor activities, conversion rates, and follow-up efficiency. Identify top performers and provide targeted coaching where needed.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h5>Auto Follow-up Reminders</h5>
+                        <p>Automated reminders for counselors to follow up with prospects. Never miss an opportunity to convert an inquiry into admission.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h5>Batch & Schedule Management</h5>
+                        <p>Manage multiple batches, schedules, and classroom allocations efficiently. Handle timetable conflicts and resource planning.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h5>Fee Management & Tracking</h5>
+                        <p>Track fee payments, generate invoices, send payment reminders, and manage discounts or scholarships seamlessly.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h5>Parent Communication Portal</h5>
+                        <p>Maintain transparent communication with parents regarding student progress, attendance, and important announcements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Use Cases</h2>
+                    <p class="section-subtitle">How different education providers benefit from our CRM</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>Coaching Centers</h4>
+                        <p>Manage multiple subjects, batches, and faculty. Track student attendance, performance, and fee payments efficiently.</p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary me-1">Batch Management</span>
+                            <span class="badge bg-primary me-1">Fee Tracking</span>
+                            <span class="badge bg-primary">Performance Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>Online Course Platforms</h4>
+                        <p>Manage course enrollments, student progress, assignment submissions, and certificate generation for online education.</p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary me-1">Digital Learning</span>
+                            <span class="badge bg-primary me-1">Progress Tracking</span>
+                            <span class="badge bg-primary">Certificate Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4>Training Institutes</h4>
+                        <p>Handle corporate training programs, workshop registrations, and skill development courses with professional certification tracking.</p>
+                        <div class="mt-3">
+                            <span class="badge bg-primary me-1">Corporate Training</span>
+                            <span class="badge bg-primary me-1">Workshop Management</span>
+                            <span class="badge bg-primary">Certification Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="section-title mb-4">Business Benefits</h2>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h5>Higher Enrollment Rate</h5>
+                            <p>Increase admission conversion by up to 40% with systematic follow-ups and targeted counseling strategies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h5>Better Student Engagement</h5>
+                            <p>Improve student satisfaction with regular progress updates, timely communication, and personalized attention.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div>
+                            <h5>Operational Efficiency</h5>
+                            <p>Reduce administrative workload by 50% with automated processes for admissions, fee collection, and communication.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div>
+                            <h5>Data-Driven Decisions</h5>
+                            <p>Make informed decisions with real-time analytics on enrollment trends, course popularity, and counselor performance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Education Institute Benefits" 
+                         class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Why Choose Our Education CRM</h2>
+                    <p class="section-subtitle">Designed specifically for the unique needs of education institutes</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="why-choose-card">
+                        <div class="why-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h5>Education-Specific Features</h5>
+                        <p>Built specifically for education with features like batch management, attendance tracking, and parent portals.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="why-choose-card">
+                        <div class="why-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5>Mobile-First Approach</h5>
+                        <p>Access from any device with responsive design. Mobile apps for counselors and faculty to work on the go.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="why-choose-card">
+                        <div class="why-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5>Secure & Compliant</h5>
+                        <p>Data security with role-based access, compliance with education regulations, and regular backups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light" id="faq">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Find answers to common questions about Education CRM</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion faq-accordion" id="educationFaq">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Can we track inquiries for multiple courses separately?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#educationFaq">
+                                <div class="accordion-body">
+                                    Yes, you can create unlimited courses and track inquiries, admissions, and conversions separately for each course. This helps in analyzing which courses are most popular and profitable.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How does auto follow-up work?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#educationFaq">
+                                <div class="accordion-body">
+                                    The system automatically schedules follow-ups based on inquiry date and stage. Counselors receive reminders via email and mobile notifications. You can customize follow-up intervals for different inquiry types.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Can parents access student information?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#educationFaq">
+                                <div class="accordion-body">
+                                    Yes, we provide a parent portal where parents can view their child's attendance, academic progress, fee status, and communicate with faculty. Access is secured with individual login credentials.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Does it support batch and timetable management?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#educationFaq">
+                                <div class="accordion-body">
+                                    Absolutely. You can create multiple batches for each course, assign faculty, create timetables, manage classroom allocations, and handle batch transfers or merges as needed.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Can we integrate with payment gateways?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#educationFaq">
+                                <div class="accordion-body">
+                                    Yes, we integrate with popular payment gateways for online fee collection. You can also generate fee receipts, track pending payments, and send automated payment reminders.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    Is training provided for staff?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#educationFaq">
+                                <div class="accordion-body">
+                                    Yes, we provide comprehensive training for administrators, counselors, and faculty. This includes live sessions, video tutorials, and detailed documentation to ensure smooth adoption.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);">
+        <div class="container text-center">
+            <h2 class="text-white mb-4">Transform Your Education Institute Today</h2>
+            <p class="lead text-white mb-5">Join 280+ education institutes that have streamlined their operations with LinkArise CRM</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="contact.html" class="btn btn-light btn-lg">Book Free Live Demo</a>
+                <a href="tel:+916354454012" class="btn btn-outline-light btn-lg">Talk to Education Expert</a>
+                <a href="#faq" class="btn btn-outline-light btn-lg">View FAQs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="images/linkarise-logo-white.webp" alt="LinkArise" class="mb-3" height="40">
+                    <p class="mb-4">Complete CRM & ERP solutions designed for modern businesses. Simplify operations, boost productivity, and grow faster.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="products.html">Products</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5>Products</h5>
+                    <div class="footer-links">
+                        <a href="telecalling-crm.html">Telecalling CRM</a>
+                        <a href="sales-crm.html">Sales CRM</a>
+                        <a href="field-service-crm.html">Field Service CRM</a>
+                        <a href="overseas-education-crm.html">Overseas Education CRM</a>
+                        <a href="task-management-crm.html">Task Management CRM</a>
+                        <a href="real-estate-crm.html">Real Estate CRM</a>
+                        <a href="education-coaching-crm.html">Education & Coaching CRM</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5>Contact Info</h5>
+                    <div class="footer-links">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Vadodara, Gujarat, India</p>
+                        <p><i class="fas fa-phone me-2"></i> +91 6354454012</p>
+                        <p><i class="fas fa-envelope me-2"></i> contact@linkarise.com</p>
+                        <p><i class="fas fa-clock me-2"></i> Mon-Sat: 11AM - 5PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="copyright">
+                        <p>&copy; 2024 LinkArise. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add Education CRM to products dropdown dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const productsDropdown = document.querySelector('.dropdown-menu');
+            if(productsDropdown) {
+                // Check if Education CRM link already exists
+                const existingLinks = productsDropdown.querySelectorAll('.dropdown-item');
+                let hasEducationCRM = false;
+                
+                existingLinks.forEach(link => {
+                    if(link.getAttribute('href') === 'education-coaching-crm.html') {
+                        hasEducationCRM = true;
+                    }
+                });
+                
+                // Add Education CRM if not already present
+                if(!hasEducationCRM) {
+                    const educationLink = document.createElement('a');
+                    educationLink.className = 'dropdown-item';
+                    educationLink.href = 'education-coaching-crm.html';
+                    educationLink.textContent = 'Education & Coaching CRM';
+                    educationLink.classList.add('active'); // Mark as active for current page
+                    
+                    // Insert after Task Management CRM
+                    const taskManagementLink = productsDropdown.querySelector('a[href="task-management-crm.html"]');
+                    if(taskManagementLink) {
+                        taskManagementLink.parentNode.insertBefore(educationLink, taskManagementLink.nextSibling);
+                    } else {
+                        productsDropdown.appendChild(educationLink);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
